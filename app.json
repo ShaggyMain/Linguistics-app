@@ -8,9 +8,11 @@
     "userInterfaceStyle": "dark",
     "backgroundColor": "#0B0F17",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.shaggymain.speakstream"
     },
     "android": {
+      "package": "com.shaggymain.speakstream",
       "adaptiveIcon": {
         "backgroundColor": "#0B0F17",
         "foregroundImage": "./assets/android-icon-foreground.png",

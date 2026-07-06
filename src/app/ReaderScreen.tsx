@@ -197,7 +197,6 @@ export function ReaderScreen({ navigation, route }: ScreenProps<'Reader'>) {
         {phase === 'countdown' && (
           <View style={styles.overlay} pointerEvents="none">
             <Text style={styles.countdownNumber}>{countdown > 0 ? countdown : 'GO'}</Text>
-            <Text style={styles.countdownHint}>read aloud, stay with the band</Text>
           </View>
         )}
 
@@ -312,7 +311,6 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     color: colors.accent,
   },
-  countdownHint: { ...t.body, color: colors.textDim, marginTop: spacing.s },
   doneOverlay: { backgroundColor: 'rgba(11, 15, 23, 0.88)' },
   doneCard: { width: '86%', maxWidth: 420 },
   doneTitle: { ...t.title, color: colors.text, marginBottom: spacing.l, textAlign: 'center' },

@@ -139,14 +139,6 @@ export function Teleprompter({
       style={styles.viewport}
       onLayout={(e) => setViewportH(e.nativeEvent.layout.height)}
     >
-      {/* Focal reading band (under the text). */}
-      {viewportH > 0 && (
-        <View
-          pointerEvents="none"
-          style={[styles.band, { top: focalTop, height: BAND_HEIGHT }]}
-        />
-      )}
-
       <Animated.View
         style={[styles.content, contentStyle, { opacity: ready ? 1 : 0 }]}
         onLayout={(e) => setContentH(e.nativeEvent.layout.height)}
@@ -209,15 +201,6 @@ const styles = StyleSheet.create({
   },
   broadcastLine: {
     color: colors.accent,
-  },
-  band: {
-    position: 'absolute',
-    left: spacing.m,
-    right: spacing.m,
-    backgroundColor: colors.accentFaint,
-    borderRadius: 14,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: 'rgba(255, 180, 84, 0.28)',
   },
   fade: {
     position: 'absolute',
